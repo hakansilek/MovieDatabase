@@ -11,15 +11,23 @@ import UIKit
 class CategoriesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    var viewModel: CategoriesCellViewModelProtocol!{
+        didSet{
+            viewModel.delegate = self
+        }
     }
     
-    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+}
+extension CategoriesTableViewCell: CategoriesCellViewModelDelegate{
+    func navigate(to detailPage: CategoriesCellRouter) {
+        switch detailPage {
+        case .detail(let item):
+            NSLog("DidSelect %d", item)
+        }
+    }
 }
 extension CategoriesTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,5 +40,11 @@ extension CategoriesTableViewCell:UICollectionViewDataSource{
         categoryCell.backgroundColor = UIColor.green
         
         return categoryCell
+    }
+}
+
+extension CategoriesTableViewCell: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       viewModel.didSelect(indexPath)
     }
 }

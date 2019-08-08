@@ -17,6 +17,9 @@
 		C4B9A6A722FA0099004B8693 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9A6A622FA0099004B8693 /* CategoriesTableViewCell.swift */; };
 		C4B9A6A922FA016B004B8693 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9A6A822FA016B004B8693 /* CategoryCollectionViewCell.swift */; };
 		C4B9A6AB22FA085F004B8693 /* MainPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9A6AA22FA085F004B8693 /* MainPageBuilder.swift */; };
+		C4B9A6AD22FC8FBD004B8693 /* MainPageContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9A6AC22FC8FBD004B8693 /* MainPageContracts.swift */; };
+		C4B9A6AF22FCA1F1004B8693 /* CategoriesCellContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9A6AE22FCA1F1004B8693 /* CategoriesCellContracts.swift */; };
+		C4B9A6B122FCA2CD004B8693 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9A6B022FCA2CD004B8693 /* CategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		C4B9A6A622FA0099004B8693 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		C4B9A6A822FA016B004B8693 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4B9A6AA22FA085F004B8693 /* MainPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageBuilder.swift; sourceTree = "<group>"; };
+		C4B9A6AC22FC8FBD004B8693 /* MainPageContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageContracts.swift; sourceTree = "<group>"; };
+		C4B9A6AE22FCA1F1004B8693 /* CategoriesCellContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCellContracts.swift; sourceTree = "<group>"; };
+		C4B9A6B022FCA2CD004B8693 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 				C4B9A6A122F9F96E004B8693 /* MainPageViewModel.swift */,
 				C4B9A6A322F9F995004B8693 /* MainPage.storyboard */,
 				C4B9A6AA22FA085F004B8693 /* MainPageBuilder.swift */,
+				C4B9A6AC22FC8FBD004B8693 /* MainPageContracts.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -126,8 +133,10 @@
 		C4B9A6A522FA006B004B8693 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				C4B9A6A622FA0099004B8693 /* CategoriesTableViewCell.swift */,
 				C4B9A6A822FA016B004B8693 /* CategoryCollectionViewCell.swift */,
+				C4B9A6A622FA0099004B8693 /* CategoriesTableViewCell.swift */,
+				C4B9A6AE22FCA1F1004B8693 /* CategoriesCellContracts.swift */,
+				C4B9A6B022FCA2CD004B8693 /* CategoriesViewModel.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -239,6 +248,9 @@
 				C4B9A6AB22FA085F004B8693 /* MainPageBuilder.swift in Sources */,
 				C4B9A6A022F9F959004B8693 /* MainPageViewController.swift in Sources */,
 				C4B9A67E22F9F545004B8693 /* AppDelegate.swift in Sources */,
+				C4B9A6AD22FC8FBD004B8693 /* MainPageContracts.swift in Sources */,
+				C4B9A6B122FCA2CD004B8693 /* CategoriesViewModel.swift in Sources */,
+				C4B9A6AF22FCA1F1004B8693 /* CategoriesCellContracts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
