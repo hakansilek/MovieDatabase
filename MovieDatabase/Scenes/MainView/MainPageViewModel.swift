@@ -10,6 +10,8 @@ import Foundation
 
 final class MainPageViewModel: MainPageViewModelProtocol {
     weak var delegate: MainPageViewModelDelegate?
+    
+    
 
     func load() {
         delegate?.notifyViewController(.setLoading(true))

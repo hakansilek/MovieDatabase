@@ -9,5 +9,7 @@
 import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var posterIV: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
     
 }

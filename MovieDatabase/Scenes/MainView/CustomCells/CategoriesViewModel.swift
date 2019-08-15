@@ -9,6 +9,12 @@
 import Foundation
 
 final class CategoriesCellViewModel: CategoriesCellViewModelProtocol {
+    
+    var cellHeight: Int
+    init(cellHeight:Int) {
+        self.cellHeight = cellHeight
+    }
+
     weak var delegate: CategoriesCellViewModelDelegate?
     
     func didSelect(_ atIndex: IndexPath) {

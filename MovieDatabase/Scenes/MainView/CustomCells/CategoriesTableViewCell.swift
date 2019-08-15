@@ -37,14 +37,25 @@ extension CategoriesTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
         
+        
+        
         categoryCell.backgroundColor = UIColor.green
         
         return categoryCell
     }
+    
 }
 
 extension CategoriesTableViewCell: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        viewModel.didSelect(indexPath)
     }
+}
+
+extension CategoriesTableViewCell: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 70, height: viewModel.cellHeight)
+    }
+    
+    
 }
