@@ -9,9 +9,8 @@
 import Foundation
 
 final class CategoriesCellViewModel: CategoriesCellViewModelProtocol {
-    
-    var cellHeight: Int
-    init(cellHeight:Int) {
+    var cellHeight: Double
+    init(cellHeight:Double) {
         self.cellHeight = cellHeight
     }
 

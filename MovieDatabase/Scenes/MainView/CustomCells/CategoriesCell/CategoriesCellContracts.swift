@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol CategoriesCellViewModelProtocol{
-    var cellHeight:Int { get }
+    var cellHeight:Double { get }
     var delegate:CategoriesCellViewModelDelegate?{get set}
     func didSelect(_ atIndex:IndexPath)
 }

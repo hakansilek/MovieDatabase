@@ -12,4 +12,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterIV: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     
+    
+    
+    func setMainPageMoviePresentation(movie: MainPageMoviePresentation) {
+        titleLbl.text = movie.movieName
+        posterIV.downloadImage(from: movie.moviePoster)
+    }
 }

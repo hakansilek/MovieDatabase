@@ -16,6 +16,7 @@ protocol MainPageViewModelProtocol {
 
 enum MainPageDelegationType {
     case setLoading(Bool)
+    case setList([CellConfigurator])
 }
 
 protocol MainPageViewModelDelegate:AnyObject {
