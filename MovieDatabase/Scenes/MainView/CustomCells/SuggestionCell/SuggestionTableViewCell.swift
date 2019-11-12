@@ -10,21 +10,51 @@ import UIKit
 
 class SuggestionTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var suggestionOfDayIV: UIImageView!
+    @IBOutlet weak var suggestionMoviePoster: UIImageView!
+    @IBOutlet weak var suggestionMovieTitle: UILabel!
     
-    @IBOutlet weak var lbl: UILabel!
-//    let movie1 = Movie(movieName: "The Shawshank Redemption", moviePoster: "https://images-na.ssl-images-amazon.com/images/I/51PmHDi0bFL.jpg", movieYear: "1994", movieFragman: "")
-//    var data:Data!
-//    var poster:URL!
+    var viewModel: SuggestionCellViewModel!{
+        didSet{
+            viewModel.delegate = self
+        }
+    }
     
-    override func prepareForReuse() {
-//        poster  = URL(string: movie1.moviePoster)
-//        data = try? Data(contentsOf: poster!)
+}
+
+extension SuggestionTableViewCell: SuggestionCellViewModelDelegate{
+    func notifySuggestionCell(_ output: SuggestionCellOutputType) {
+        switch output {
+        case .setLoading(let isLoading):
+            UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+        case .setSuggestionCellData(let suggestionCellData):
+            suggestionMovieTitle.text = suggestionCellData.movieName
+            suggestionMoviePoster.downloadImage(from: suggestionCellData.moviePoster)
+            suggestionMoviePoster.addInnerShadow()
+        }
+    }
+    
+    func navigate(to detailPage: SuggestionCellRouter) {
+        
     }
 }
 
 extension SuggestionTableViewCell: ConfigurableCell{
-    func configure(data movie: MovieOfDay, viewModel: CategoriesCellViewModelProtocol) {
-        self.lbl.text = movie.text
+    func configure(viewModel: MainPageCellViewModelProtocol) {
+        self.viewModel = viewModel as? SuggestionCellViewModel
+        viewModel.load()
+    }
+}
+
+extension UIView {
+    public func addInnerShadow(topColor: UIColor = UIColor.black.withAlphaComponent(1)) {
+        let shadowLayer = CAGradientLayer()
+        shadowLayer.cornerRadius = layer.cornerRadius
+        shadowLayer.frame = bounds
+        shadowLayer.frame.size.height = 100.0
+        shadowLayer.colors = [
+            topColor.cgColor,
+            UIColor.black.withAlphaComponent(0).cgColor
+        ]
+        layer.addSublayer(shadowLayer)
     }
 }

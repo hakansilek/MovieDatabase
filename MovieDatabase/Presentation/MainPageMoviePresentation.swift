@@ -13,12 +13,4 @@ struct MainPageMoviePresentation {
     let movieId:String
     let movieName:String
     let moviePoster:String
-//    let movieYear: String
-//    let movieFragman:String
-    
-    init(movieDTO: MovieDTO) {
-        movieName = movieDTO.Title
-        moviePoster = movieDTO.Poster
-        movieId = movieDTO.Id
-    }
 }

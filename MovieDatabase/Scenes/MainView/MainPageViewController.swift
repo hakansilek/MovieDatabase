@@ -19,11 +19,9 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        self.view.backgroundColor = .black
+        categoriesTableView.backgroundColor = .black
         viewModel.load()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
 }
 
@@ -36,9 +34,7 @@ extension MainPageViewController:MainPageViewModelDelegate{
             self.cellConfigurator = cellConfiguratorItems
             self.categoriesTableView.reloadData()
         }
-        
     }
-    
 }
 
 extension MainPageViewController: UITableViewDataSource{

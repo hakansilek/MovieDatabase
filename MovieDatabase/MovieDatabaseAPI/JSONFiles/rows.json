@@ -1,0 +1,8 @@
+{
+    "rows":[
+        {"rowType":"suggestion", "dataId":"suggestion3"},
+        {"rowType":"category", "dataId":"category2"},
+        {"rowType":"category", "dataId":"category3"},
+        {"rowType":"category", "dataId":"category4"}
+    ]
+}

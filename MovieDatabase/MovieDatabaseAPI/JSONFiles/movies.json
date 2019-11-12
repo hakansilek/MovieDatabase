@@ -2,6 +2,17 @@
     "rows":
     [
         {
+            "suggestion":{
+            "rowtitle":"Random Movie",
+            "movie":{
+            "Id":"5",
+            "Title":"The Good, the Bad and the Ugly",
+            "Poster":"https://m.media-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SX300.jpg"
+            }
+            }
+        },
+        {
+            "category":{
             "rowtitle":"Top 100",
             "columns":[
                 {"Id":"1","Title":"The Shawshank Redemption","Poster":"https://images-na.ssl-images-amazon.com/images/I/51PmHDi0bFL.jpg"},
@@ -61,8 +72,10 @@
                 }
 
             ]
+        }
         },
         {
+            "category":{
             "rowtitle":"Most Rated Actions Movies",
             "columns":[
                  {"Id":"1","Title":"The Mountain II","Poster":"https://m.media-amazon.com/images/M/MV5BMDdkMjI3YzctYjJiZC00NzljLWJhMTItMWEwMDU0YjJlMjI3XkEyXkFqcGdeQXVyMjMwMjUzNDQ@._V1_SX300.jpg"},
@@ -73,8 +86,10 @@
                  {"Id":"6","Title":"Avengers: Endgame","Poster":"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"},
                  {"Id":"7","Title":"Star Wars: Episode IV - A New Hope","Poster":"https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"}
             ]
+        }
         },
         {
+            "category":{
             "rowtitle":"Most Rated Animation Movies",
             "columns":[
                  {"Id":"1","Title":"Spirited Away","Poster":"https://m.media-amazon.com/images/M/MV5BNmU5OTQ0OWQtOTY0OS00Yjg4LWE1NDYtNDRhYWMxYWY4OTMwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"},
@@ -86,8 +101,10 @@
                  {"Id":"7","Title":"WALL·E","Poster":"https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg"},
                  {"Id":"8","Title":"Toy Story 3","Poster":"https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg"}
             ]
+        }
         },
         {
+            "category":{
             "rowtitle":"Most Rated Comedy Movies",
             "columns":[
                  {"Id":"1","Title":"The Chaos Class","Poster":"https://m.media-amazon.com/images/M/MV5BNjJlNWYwZWItYmNhYy00Yjc1LWFkMzYtZjgxZDBjZjZmODg0XkEyXkFqcGdeQXVyMjExNjgyMTc@._V1_SX300.jpg"},
@@ -95,6 +112,7 @@
                  {"Id":"3","Title":"Parasite","Poster":"https://m.media-amazon.com/images/M/MV5BOWVmODY4MjYtZGViYS00MzJjLWI3NmItMGFmMDRkMzI1OTU3XkEyXkFqcGdeQXVyNTQ0NTUxOTA@._V1_SX300.jpg"},
                  {"Id":"4","Title":"The Intouchables","Poster":"https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_SX300.jpg"}
             ]
+        }
         }
             
     ]

@@ -11,11 +11,11 @@ import Foundation
 
 public struct MainPageResponse: Decodable{
     
-    public let rows : [Rows]
-    
+    public let rows : [Row]
 }
 
-public struct Rows:Decodable{
-    public let rowtitle : String
-    public let columns : [MovieDTO]
+public struct Row: Decodable{
+    public let rowType:String
+    public let dataId:String
 }
+

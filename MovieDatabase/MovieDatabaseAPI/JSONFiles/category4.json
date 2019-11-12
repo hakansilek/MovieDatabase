@@ -1,0 +1,10 @@
+{
+    "rowtitle":"Most Rated Comedy Movies",
+    "columns":[
+         {"Id":"1","Title":"The Chaos Class","Poster":"https://m.media-amazon.com/images/M/MV5BNjJlNWYwZWItYmNhYy00Yjc1LWFkMzYtZjgxZDBjZjZmODg0XkEyXkFqcGdeQXVyMjExNjgyMTc@._V1_SX300.jpg"},
+         {"Id":"2","Title":"Life Is Beautiful","Poster":"https://m.media-amazon.com/images/M/MV5BYmJmM2Q4NmMtYThmNC00ZjRlLWEyZmItZTIwOTBlZDQ3NTQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"},
+         {"Id":"3","Title":"Parasite","Poster":"https://m.media-amazon.com/images/M/MV5BOWVmODY4MjYtZGViYS00MzJjLWI3NmItMGFmMDRkMzI1OTU3XkEyXkFqcGdeQXVyNTQ0NTUxOTA@._V1_SX300.jpg"},
+         {"Id":"4","Title":"The Intouchables","Poster":"https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_SX300.jpg"}
+    ]
+}
+

@@ -10,8 +10,7 @@ import UIKit
 
 
 protocol ConfigurableCell{
-    associatedtype DataType
-    func configure(data: DataType, viewModel: CategoriesCellViewModelProtocol)
+    func configure(viewModel: MainPageCellViewModelProtocol)
 }
 
 protocol CellConfigurator {
@@ -20,20 +19,18 @@ protocol CellConfigurator {
     func configure(cell: UIView)
 }
 
-class TableCellConfigurator<CellType: ConfigurableCell, DataType>: CellConfigurator where CellType.DataType == DataType {
+class TableCellConfigurator<CellType: ConfigurableCell>: CellConfigurator{
     var cellHeigth: Double
     
     static var reuseId: String { return String(describing: CellType.self)}
     
-    let item: DataType
-    let viewModel: CategoriesCellViewModelProtocol
-    init(item:DataType, viewModel: CategoriesCellViewModelProtocol) {
-        self.item = item
+    let viewModel: MainPageCellViewModelProtocol
+    init( viewModel: MainPageCellViewModelProtocol, cellHeight: Double) {
         self.viewModel = viewModel
-        self.cellHeigth = viewModel.cellHeight
+        self.cellHeigth = cellHeight
     }
     
     func configure(cell: UIView) {
-        (cell as! CellType).configure(data: item, viewModel: viewModel)
+        (cell as! CellType).configure(viewModel: viewModel)
     }
 }
