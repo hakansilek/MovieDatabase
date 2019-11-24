@@ -12,5 +12,5 @@ import Foundation
 struct MainPageMoviePresentation {
     let movieId:String
     let movieName:String
-    let moviePoster:String
+    let moviePoster:URL
 }

@@ -30,7 +30,7 @@ final class SuggestionCellViewModel: SuggestionCellViewModelProtocol{
         delegate?.notifySuggestionCell(.setLoading(false))
     }
     
-    func loadData() throws{
+    private func loadData() throws{
         let suggestionCellResponse = try JsonService.loadData(SuggestionCellResponse.self, resource: dataId)
         let responseMovie = suggestionCellResponse.movie
         

@@ -1,0 +1,41 @@
+{
+    "rowtitle":"Actors",
+    "movieStars":[
+       {
+         "Name": "Robert De Niro",
+         "Image": "https://tele1.com.tr/wp-content/uploads/2019/10/Robert-De-Niro.jpg",
+         "Id": "551489810"
+       },
+       {
+         "Name": "Al Pacino",
+         "Image": "https://m.media-amazon.com/images/M/MV5BMTQzMzg1ODAyNl5BMl5BanBnXkFtZTYwMjAxODQ1._V1_UY1200_CR84,0,630,1200_AL_.jpg",
+         "Id": "551487890"
+       },
+       {
+         "Name": "Brad Pitt",
+         "Image": "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg",
+         "Id": "551486730"
+       },
+       {
+         "Name": "Johnny Depp",
+         "Image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/03/28/09/depp-afp.jpg?w968h681",
+         "Id": "551486730"
+       },
+       {
+         "Name": "Leonardo DiCaprio",
+         "Image": "https://www.pedestrian.tv/content/uploads/2019/06/leo-1-637x397.png",
+         "Id": "551486730"
+       },
+       {
+         "Name": "Morgan Freeman",
+         "Image": "https://pmctvline2.files.wordpress.com/2018/08/morgan-freeman-the-story-of-god-national-geographic.jpg?w=620&h=420&crop=1",
+         "Id": "551486730"
+       },
+       {
+         "Name": "Denzel Washington",
+         "Image": "https://www.onthisday.com/images/people/denzel-washington-medium.jpg",
+         "Id": "551490890"
+       },
+    ]
+}
+

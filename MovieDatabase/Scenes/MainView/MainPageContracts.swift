@@ -14,11 +14,11 @@ protocol MainPageViewModelProtocol {
     func load()
 }
 
-enum MainPageDelegationType {
+enum MainPageOutput {
     case setLoading(Bool)
     case setList([CellConfigurator])
 }
 
 protocol MainPageViewModelDelegate:AnyObject {
-    func notifyViewController(_ output: MainPageDelegationType)
+    func notifyViewController(_ output: MainPageOutput)
 }

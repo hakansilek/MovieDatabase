@@ -10,12 +10,6 @@ import Foundation
 
 
 public struct MainPageResponse: Decodable{
-    
-    public let rows : [Row]
-}
-
-public struct Row: Decodable{
-    public let rowType:String
-    public let dataId:String
+    public let rows : [RowDTO]
 }
 

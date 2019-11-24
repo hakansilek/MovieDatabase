@@ -13,7 +13,7 @@ protocol CategoryCellViewModelProtocol: MainPageCellViewModelProtocol{
     var delegate:CategoryCellViewModelDelegate?{get set}
     func didSelect(_ atIndex:IndexPath)
 }
-enum CategoryCellOutputType{
+enum CategoryCellOutput{
     case setLoading(Bool)
     case setCategoryCellData(MainPageCategoryCellPresentation)
 }
@@ -21,6 +21,6 @@ enum CategoryCellRouter{
     case detail(Int)
 }
 protocol CategoryCellViewModelDelegate:AnyObject {
-    func notifyCategoryCell(_ output :CategoryCellOutputType)
+    func notifyCategoryCell(_ output :CategoryCellOutput)
     func navigate(to detailPage :CategoryCellRouter)
 }

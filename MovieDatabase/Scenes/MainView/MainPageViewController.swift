@@ -26,7 +26,7 @@ class MainPageViewController: UIViewController {
 }
 
 extension MainPageViewController:MainPageViewModelDelegate{
-    func notifyViewController(_ output: MainPageDelegationType) {
+    func notifyViewController(_ output: MainPageOutput) {
         switch output {
         case .setLoading(let isLoading):
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading

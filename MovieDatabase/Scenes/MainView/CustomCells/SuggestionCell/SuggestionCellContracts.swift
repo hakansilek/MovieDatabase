@@ -13,7 +13,7 @@ protocol SuggestionCellViewModelProtocol: MainPageCellViewModelProtocol {
     var delegate: SuggestionCellViewModelDelegate?{get set}
 }
 
-enum SuggestionCellOutputType{
+enum SuggestionCellOutput{
     case setLoading(Bool)
     case setSuggestionCellData(MainPageMoviePresentation)
 }
@@ -23,6 +23,6 @@ enum SuggestionCellRouter{
 }
 
 protocol SuggestionCellViewModelDelegate:AnyObject{
-    func notifySuggestionCell(_ output: SuggestionCellOutputType)
+    func notifySuggestionCell(_ output: SuggestionCellOutput)
     func navigate(to detailPage :SuggestionCellRouter)
 }

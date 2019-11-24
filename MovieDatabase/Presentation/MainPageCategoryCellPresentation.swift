@@ -10,6 +10,6 @@ import Foundation
 
 
 struct MainPageCategoryCellPresentation {
-    let categoryCellTitle:String
-    let categoryCellMovies:[MainPageMoviePresentation]
+    let categoryCellTitle: String
+    let categoryCellList: [MainPageMoviePresentation]
 }

@@ -9,10 +9,10 @@
 import Foundation
 
 
-public struct Movie: Decodable{
+public struct MovieDTO: Decodable{
     public let id: String
     public let title : String
-    public let poster: String
+    public let poster: URL
     
     private enum CodingKeys: String, CodingKey{
         case id = "Id"

@@ -11,9 +11,9 @@ import Foundation
 final class CategoryCellViewModel:  CategoryCellViewModelProtocol {
     
     
-    internal weak var delegate: CategoryCellViewModelDelegate?
+    weak var delegate: CategoryCellViewModelDelegate?
     private var categoryCellPresentation: MainPageCategoryCellPresentation!
-    var dataId: String
+    let dataId: String
     init(dataId:String) {
         self.dataId = dataId
     }
@@ -33,13 +33,13 @@ final class CategoryCellViewModel:  CategoryCellViewModelProtocol {
         
     }
     
-    func loadData() throws{
+    private func loadData() throws{
           let categoryCellResponse = try JsonService.loadData(CategoryCellResponse.self, resource: dataId)
         
         let categoryCellTitle = categoryCellResponse.rowtitle
         let categoryCellMovies = categoryCellResponse.columns.map({MainPageMoviePresentation(movieId: $0.id, movieName: $0.title, moviePoster: $0.poster)})
         
-        categoryCellPresentation = MainPageCategoryCellPresentation(categoryCellTitle: categoryCellTitle, categoryCellMovies: categoryCellMovies)
+        categoryCellPresentation = MainPageCategoryCellPresentation(categoryCellTitle: categoryCellTitle, categoryCellList: categoryCellMovies)
     }
     
     

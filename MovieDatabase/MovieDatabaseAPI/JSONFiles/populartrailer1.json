@@ -1,0 +1,9 @@
+
+{
+    "rowtitle":"Popular Trailers",
+    "trailers":[
+        {"Id":"1","Title":"The Mandalorian","Thumbnail":"https://cdn-static.denofgeek.com/sites/denofgeek/files/2019/08/star-wars-the-mandalorian-tv-series_1.jpg"},
+        {"Id":"2","Title":"The SpongeBob Movie: Sponge on the Run","Thumbnail":"https://i.ytimg.com/vi/HfiH_526qhY/maxresdefault.jpg"},
+        {"Id":"3","Title":"Joker","Thumbnail":"https://i.ytimg.com/vi/7tGdyFym9wU/maxresdefault.jpg"}
+    ]
+}

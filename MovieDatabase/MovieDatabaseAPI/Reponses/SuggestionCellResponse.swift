@@ -10,10 +10,10 @@ import Foundation
 
 
 public struct SuggestionCellResponse: Decodable{
-    public let movie: Movie
+    public let movie: MovieDTO
     
     public init(from decoder: Decoder) throws{
         let container = try decoder.singleValueContainer()
-        movie = try container.decode(Movie.self)
+        movie = try container.decode(MovieDTO.self)
     }
 }

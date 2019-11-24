@@ -24,7 +24,7 @@ final class MainPageViewModel: MainPageViewModelProtocol {
         delegate?.notifyViewController(.setLoading(false))
         
     }
-    func loadData() throws{
+    private func loadData() throws{
         let mainPageResponse = try JsonService.loadData(MainPageResponse.self, resource: "rows")
         rows = MainPageRowCreator.shared.getCellType(rows: mainPageResponse.rows)
     }

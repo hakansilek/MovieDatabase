@@ -10,10 +10,10 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var categoryTitle: UILabel!
+    @IBOutlet weak var categoryCellTitle: UILabel!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-    var categoryCellData:MainPageCategoryCellPresentation!
-    var viewModel: CategoryCellViewModelProtocol!{
+    fileprivate var categoryCellPresentation:MainPageCategoryCellPresentation!
+    fileprivate var viewModel: CategoryCellViewModelProtocol!{
         didSet{
             viewModel.delegate = self
             viewModel.load()
@@ -24,18 +24,16 @@ class CategoryTableViewCell: UITableViewCell {
         super.awakeFromNib()
         contentView.backgroundColor = .black
         categoryCollectionView.backgroundColor = .black
-        categoryTitle.textColor = .white
-        categoryTitle.font = UIFont.init(name: "Menlo-Bold", size: 14)
     }
 }
 extension CategoryTableViewCell: CategoryCellViewModelDelegate{
-    func notifyCategoryCell(_ output: CategoryCellOutputType) {
+    func notifyCategoryCell(_ output: CategoryCellOutput) {
         switch output {
         case .setLoading(let isLoading):
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
         case .setCategoryCellData(let categoryCellData):
-            self.categoryCellData = categoryCellData
-            self.categoryTitle.text = categoryCellData.categoryCellTitle
+            self.categoryCellPresentation = categoryCellData
+            self.categoryCellTitle.text = categoryCellData.categoryCellTitle
         }
     }
     
@@ -48,13 +46,13 @@ extension CategoryTableViewCell: CategoryCellViewModelDelegate{
 }
 extension CategoryTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryCellData.categoryCellMovies.count
+        return categoryCellPresentation.categoryCellList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
         
-        let movie = categoryCellData.categoryCellMovies[indexPath.row]
+        let movie = categoryCellPresentation.categoryCellList[indexPath.row]
         categoryCell.setMainPageMoviePresentation(movie: movie)
         
         return categoryCell

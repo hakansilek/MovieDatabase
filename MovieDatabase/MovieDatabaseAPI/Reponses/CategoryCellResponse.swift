@@ -11,5 +11,5 @@ import Foundation
 
 public struct CategoryCellResponse: Decodable{
     public let rowtitle: String
-    public let columns: [Movie]
+    public let columns: [MovieDTO]
 }
