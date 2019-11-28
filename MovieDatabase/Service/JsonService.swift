@@ -12,7 +12,7 @@ import Foundation
 public struct JsonService{
     public static func loadData<T>(_ responseStruct: T.Type, resource name:String) throws ->T where T : Decodable{
         let bundle = Bundle.init(for: MainPageViewModel.self)
-        let url = bundle.url(forResource: name, withExtension: "json").unsafelyUnwrapped
+        guard let url = bundle.url(forResource: name, withExtension: "json")else{throw NSError()}
         let data = try Data(contentsOf: url)
         let response = try JSONDecoder().decode(responseStruct, from: data)
 

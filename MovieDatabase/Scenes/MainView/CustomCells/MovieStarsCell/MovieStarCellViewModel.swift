@@ -13,7 +13,7 @@ final class MovieStarCellViewModel: MovieStarCellViewModelProtocol {
     weak var delegate: MovieStarCellViewModelDelegate?
     
     let dataId: String
-    var movieStarCellPresentation: MainPageMovieStarCellPresentation!
+    private var movieStarCellPresentation: MainPageMovieStarCellPresentation!
     
     init(dataId:String) {
            self.dataId = dataId
@@ -22,9 +22,9 @@ final class MovieStarCellViewModel: MovieStarCellViewModelProtocol {
         delegate?.notifyMovieStarCell(.setLoading(true))
         do{
             try loadData()
-            delegate?.notifyMovieStarCell(.setCategoryCellData(movieStarCellPresentation))
+            delegate?.notifyMovieStarCell(.setMovieStarCellData(movieStarCellPresentation))
         }catch{
-            print("MovieStarCell Error")
+            delegate?.notifyMovieStarCell(.error)
         }
         delegate?.notifyMovieStarCell(.setLoading(false))
         

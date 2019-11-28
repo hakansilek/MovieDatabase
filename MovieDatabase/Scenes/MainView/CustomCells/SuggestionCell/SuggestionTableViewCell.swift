@@ -28,11 +28,12 @@ extension SuggestionTableViewCell: SuggestionCellViewModelDelegate{
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
         case .setSuggestionCellData(let suggestionCellData):
             suggestionMoviePoster.downloadImage(from: suggestionCellData.moviePoster)
+        case .error:
+            handleErrorCase()
         }
     }
-    
-    func navigate(to detailPage: SuggestionCellRouter) {
-        
+    private func handleErrorCase() {
+        addErrorMessageView()
     }
 }
 

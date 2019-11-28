@@ -10,9 +10,9 @@ import Foundation
 
 
 final class PopularTrailerCellViewModel: PopularTrailerCellProtocol{
-    weak var delegate: PopularTrailerCellDelegate?
+    weak var delegate: PopularTrailerCellViewModelDelegate?
     
-    var popularTrailerCellPresentation: MainPagePopularTrailerCellPresentation!
+    private var popularTrailerCellPresentation: MainPagePopularTrailerCellPresentation!
     
     let dataId: String
     init(dataId:String) {
@@ -22,9 +22,9 @@ final class PopularTrailerCellViewModel: PopularTrailerCellProtocol{
         delegate?.notifyPopularTrailerCell(.setLoading(true))
         do{
             try loadData()
-            delegate?.notifyPopularTrailerCell(.setCategoryCellData(popularTrailerCellPresentation))
+            delegate?.notifyPopularTrailerCell(.setPopularTrailerCellData(popularTrailerCellPresentation))
         }catch{
-            print("PopularTrailerCell Error")
+            delegate?.notifyPopularTrailerCell(.error)
         }
         delegate?.notifyPopularTrailerCell(.setLoading(false))
     }

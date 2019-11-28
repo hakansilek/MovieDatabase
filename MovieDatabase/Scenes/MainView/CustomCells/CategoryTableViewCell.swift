@@ -12,8 +12,8 @@ class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryCellTitle: UILabel!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-    fileprivate var categoryCellPresentation:MainPageCategoryCellPresentation!
-    fileprivate var viewModel: CategoryCellViewModelProtocol!{
+    private var categoryCellPresentation:MainPageCategoryCellPresentation?
+    private var viewModel: CategoryCellViewModelProtocol!{
         didSet{
             viewModel.delegate = self
             viewModel.load()
@@ -34,6 +34,8 @@ extension CategoryTableViewCell: CategoryCellViewModelDelegate{
         case .setCategoryCellData(let categoryCellData):
             self.categoryCellPresentation = categoryCellData
             self.categoryCellTitle.text = categoryCellData.categoryCellTitle
+        case .error:
+            handleErrorCase()
         }
     }
     
@@ -43,16 +45,27 @@ extension CategoryTableViewCell: CategoryCellViewModelDelegate{
             NSLog("DidSelect %d", item)
         }
     }
+    
+    private func handleErrorCase() {
+        self.categoryCellTitle.text = ""
+        addErrorMessageView()
+    }
 }
 extension CategoryTableViewCell:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryCellPresentation.categoryCellList.count
+        guard let presentation = categoryCellPresentation else {
+            return 0
+        }
+        return presentation.categoryCellList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CategoryCollectionViewCell
         
-        let movie = categoryCellPresentation.categoryCellList[indexPath.row]
+        guard let presentation = categoryCellPresentation else {
+            return UICollectionViewCell()
+        }
+        let movie = presentation.categoryCellList[indexPath.row]
         categoryCell.setMainPageMoviePresentation(movie: movie)
         
         return categoryCell

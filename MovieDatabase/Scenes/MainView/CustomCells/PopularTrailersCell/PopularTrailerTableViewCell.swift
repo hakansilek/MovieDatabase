@@ -10,12 +10,10 @@ import UIKit
 
 class PopularTrailerTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var popularTrailerCellTitle: MainPageTitle!
+    @IBOutlet weak var popularTrailerCellTitle: MainPageRowTitle!
     @IBOutlet weak var popularTrailerCollectionView: UICollectionView!
     @IBOutlet weak var popularTrailerPageControl: UIPageControl!
-    
-    
-    private var popularTrailerCellPresentation: MainPagePopularTrailerCellPresentation!
+    private var popularTrailerCellPresentation: MainPagePopularTrailerCellPresentation?
     private var viewModel: PopularTrailerCellProtocol!{
         didSet{
             viewModel.delegate = self
@@ -26,34 +24,47 @@ class PopularTrailerTableViewCell: UITableViewCell {
         super.awakeFromNib()
         contentView.backgroundColor = .black
         popularTrailerCollectionView.backgroundColor = .black
-        
-       
         popularTrailerPageControl.currentPage = 0
+        popularTrailerPageControl.numberOfPages = 0
     }
 }
 
-extension PopularTrailerTableViewCell: PopularTrailerCellDelegate{
+extension PopularTrailerTableViewCell: PopularTrailerCellViewModelDelegate{
     func notifyPopularTrailerCell(_ output: PopularTrailerCellOutput) {
         switch output {
         case .setLoading(let isLoading):
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
-        case .setCategoryCellData(let popularTrailerCellData):
+        case .setPopularTrailerCellData(let popularTrailerCellData):
             popularTrailerCellPresentation = popularTrailerCellData
             popularTrailerCellTitle.text = popularTrailerCellData.popularTrailerCellTitle
              popularTrailerPageControl.numberOfPages = popularTrailerCellData.popularTrailerCellList.count
+        case .error:
+            handleErrorCase()
         }
+    }
+    
+    private func handleErrorCase() {
+        self.popularTrailerCellTitle.text = ""
+        addErrorMessageView()
     }
 }
 
 extension PopularTrailerTableViewCell: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return popularTrailerCellPresentation.popularTrailerCellList.count
+        guard let presentation = popularTrailerCellPresentation else {
+            return 0
+        }
+        
+        return presentation.popularTrailerCellList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let popularTrailerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularTrailerCell", for: indexPath) as! PopularTrailerCollectionViewCell
-        popularTrailerCell.setPopularTrailerPresentation(popularTrailer: popularTrailerCellPresentation.popularTrailerCellList[indexPath.row])
+        guard let presentation = popularTrailerCellPresentation else {
+            return UICollectionViewCell()
+        }
+        popularTrailerCell.setPopularTrailerPresentation(popularTrailer: presentation.popularTrailerCellList[indexPath.row])
         return popularTrailerCell
     }
 }

@@ -11,9 +11,9 @@ import Foundation
 
 final class SuggestionCellViewModel: SuggestionCellViewModelProtocol{
    
-    internal weak var delegate: SuggestionCellViewModelDelegate?
+    weak var delegate: SuggestionCellViewModelDelegate?
     private var suggestionCellMoviePresentation:MainPageMoviePresentation!
-    internal var dataId: String
+    let dataId: String
     
     init(dataId:String) {
         self.dataId = dataId
@@ -35,9 +35,6 @@ final class SuggestionCellViewModel: SuggestionCellViewModelProtocol{
         let responseMovie = suggestionCellResponse.movie
         
         suggestionCellMoviePresentation = MainPageMoviePresentation(movieId: responseMovie.id, movieName: responseMovie.title, moviePoster: responseMovie.poster)
-        
-       
+
     }
-    
-    
 }

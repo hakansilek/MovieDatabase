@@ -27,7 +27,7 @@ final class CategoryCellViewModel:  CategoryCellViewModelProtocol {
             try loadData()
             delegate?.notifyCategoryCell(.setCategoryCellData(categoryCellPresentation))
         }catch{
-            print("CategoryCell Error")
+            delegate?.notifyCategoryCell(.error)
         }
          delegate?.notifyCategoryCell(.setLoading(false))
         

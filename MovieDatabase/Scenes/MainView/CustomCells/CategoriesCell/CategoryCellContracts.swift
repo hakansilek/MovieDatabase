@@ -16,6 +16,7 @@ protocol CategoryCellViewModelProtocol: MainPageCellViewModelProtocol{
 enum CategoryCellOutput{
     case setLoading(Bool)
     case setCategoryCellData(MainPageCategoryCellPresentation)
+    case error
 }
 enum CategoryCellRouter{
     case detail(Int)

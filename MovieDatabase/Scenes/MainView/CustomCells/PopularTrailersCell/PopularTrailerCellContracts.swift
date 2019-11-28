@@ -10,14 +10,15 @@ import Foundation
 
 
 protocol PopularTrailerCellProtocol:MainPageCellViewModelProtocol {
-    var delegate: PopularTrailerCellDelegate?{get set}
+    var delegate: PopularTrailerCellViewModelDelegate?{get set}
 }
 
 enum PopularTrailerCellOutput{
     case setLoading(Bool)
-    case setCategoryCellData(MainPagePopularTrailerCellPresentation)
+    case setPopularTrailerCellData(MainPagePopularTrailerCellPresentation)
+    case error
 }
 
-protocol PopularTrailerCellDelegate:AnyObject {
+protocol PopularTrailerCellViewModelDelegate:AnyObject {
      func notifyPopularTrailerCell(_ output: PopularTrailerCellOutput)
 }

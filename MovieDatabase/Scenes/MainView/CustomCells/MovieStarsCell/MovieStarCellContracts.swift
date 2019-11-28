@@ -15,7 +15,8 @@ protocol MovieStarCellViewModelProtocol:MainPageCellViewModelProtocol {
 
 enum MovieStarCellOutput {
     case setLoading(Bool)
-    case setCategoryCellData(MainPageMovieStarCellPresentation)
+    case setMovieStarCellData(MainPageMovieStarCellPresentation)
+    case error
 }
 
 protocol MovieStarCellViewModelDelegate:AnyObject {
