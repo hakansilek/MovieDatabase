@@ -18,7 +18,7 @@ class MainPageViewModelTests: XCTestCase {
         viewModel.delegate = mockView
     }
     
-    func testLoadValid(){
+    func testLoad(){
         viewModel.load()
         XCTAssertTrue(mockView.outputs.count == 3)
         XCTAssertTrue(mockView.mainPageRows.count > 0)
@@ -28,19 +28,19 @@ class MainPageViewModelTests: XCTestCase {
         case .setLoading(_):
             break
         default:
-            XCTFail("First output should be setLoading")
+            XCTFail("First output must be setLoading")
         }
         switch mockView.outputs[1] {
         case .setList(_):
             break
         default:
-            XCTFail("Second output should be setList")
+            XCTFail("Second output must be setList")
         }
         switch mockView.outputs[2] {
         case .setLoading(_):
             break
         default:
-            XCTFail("Third output should be setLoading")
+            XCTFail("Third output must be setLoading")
         }
         
         XCTAssertTrue(mockView.loadingList[0])

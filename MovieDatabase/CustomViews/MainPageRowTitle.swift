@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainPageTitle: UILabel {
+class MainPageRowTitle: UILabel {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
