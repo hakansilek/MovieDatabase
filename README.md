@@ -20,7 +20,7 @@
     ]
 }
 ```
-![ss1](ReadmeResources/ss1.gif)
+<img src="./ReadmeResources/ss1.gif" width="621" height="1344">
 
 ### Example 2
 ```
@@ -36,7 +36,7 @@
     ]
 }
 ```
-![ss2](ReadmeResources/ss2.gif)
+<img src="./ReadmeResources/ss2.gif" width="621" height="1344">
 
 ### Example 3
 ```
@@ -54,4 +54,4 @@
 
 ## Error Handling
 ### Each row is independent. Thus, if any error occurs, only the relevant row is affected.
-![error](ReadmeResources/error.gif =621x1344)
+<img src="./ReadmeResources/error.gif" width="621" height="1344">
