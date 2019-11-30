@@ -20,7 +20,7 @@
     ]
 }
 ```
-<img src="./ReadmeResources/ss1.gif" width="621" height="1344">
+<img src="./ReadmeResources/ss1.gif" width="300" height="600">
 
 ### Example 2
 ```
@@ -36,7 +36,7 @@
     ]
 }
 ```
-<img src="./ReadmeResources/ss2.gif" width="621" height="1344">
+<img src="./ReadmeResources/ss2.gif" width="300" height="600">
 
 ### Example 3
 ```
@@ -49,9 +49,9 @@
     ]
 }
 ```
-![ss3](ReadmeResources/ss3.gif)
+<img src="./ReadmeResources/ss3.gif" width="300" height="600">
 
 
 ## Error Handling
 ### Each row is independent. Thus, if any error occurs, only the relevant row is affected.
-<img src="./ReadmeResources/error.gif" width="621" height="1344">
+<img src="./ReadmeResources/error.gif" width="300" height="600">
