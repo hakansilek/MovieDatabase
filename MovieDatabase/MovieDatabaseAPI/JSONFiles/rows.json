@@ -1,9 +1,8 @@
 {
     "rows":[
-        {"rowType":"suggestion", "dataId":"suggestion2"},
+        {"rowType":"suggestion", "dataId":"suggestion1"},
         {"rowType":"moviestar", "dataId":"moviestar1"},
-        {"rowType":"category", "dataId":"category2"},
-        {"rowType":"populartrailer", "dataId":"populartrailer1"},
+        {"rowType":"populartrailer", "dataId":"populartrailer"},
         {"rowType":"category", "dataId":"category3"},
         {"rowType":"moviestar", "dataId":"moviestar2"},
         {"rowType":"category", "dataId":"category4"}

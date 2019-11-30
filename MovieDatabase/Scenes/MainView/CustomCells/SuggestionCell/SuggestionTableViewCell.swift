@@ -19,6 +19,10 @@ class SuggestionTableViewCell: UITableViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        contentView.backgroundColor = .black
+    }
+    
 }
 
 extension SuggestionTableViewCell: SuggestionCellViewModelDelegate{
