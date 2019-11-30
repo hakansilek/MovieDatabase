@@ -1,4 +1,5 @@
 # MovieDatabase
+The aim of this project is to show how to create a tableview thas has multiple row types.
 
 ## To-Do list to add new row type:
 1. Create a new tableviewcell layout, viewmodel and controller
