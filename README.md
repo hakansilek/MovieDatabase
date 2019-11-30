@@ -5,8 +5,8 @@
 2. Add the new row type to MainPageRowCreator.swift
 3. That's all :)
 
-##You can get different screens by just modifying the rows.json file.
-###Example 1
+## You can get different screens by just modifying the rows.json file.
+### Example 1
 ```
 {
     "rows":[
@@ -22,7 +22,7 @@
 ```
 ![ss1](ReadmeResources/ss1.gif)
 
-###Example 2
+### Example 2
 ```
 {
     "rows":[
@@ -38,7 +38,7 @@
 ```
 ![ss2](ReadmeResources/ss2.gif)
 
-###Example 3
+### Example 3
 ```
 {
     "rows":[
@@ -52,6 +52,6 @@
 ![ss3](ReadmeResources/ss3.gif)
 
 
-##Error Handling
-###Each row is independent. Thus, if any error occurs, only the relevant row is affected.
+## Error Handling
+### Each row is independent. Thus, if any error occurs, only the relevant row is affected.
 ![error](ReadmeResources/error.gif)
