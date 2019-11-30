@@ -54,4 +54,4 @@
 
 ## Error Handling
 ### Each row is independent. Thus, if any error occurs, only the relevant row is affected.
-![error](ReadmeResources/error.gif)
+![error](ReadmeResources/error.gif =621x1,344)
