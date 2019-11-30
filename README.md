@@ -57,4 +57,6 @@ The aim of this project is to show how to create a tableview that has multiple r
 ### Each row is independent. Thus, if any error occurs, only the relevant row is affected.
 <img src="./ReadmeResources/error.gif" width="300" height="600">
 
+---
+
 ### Download and enjoy :)
