@@ -21,7 +21,7 @@ The aim of this project is to show how to create a tableview that has multiple r
     ]
 }
 ```
-<img src="./ReadmeResources/ss1.gif" width="300" height="600">
+<img src="./ReadmeResources/ss1.gif" width="25%">
 
 ### Example 2
 ```
@@ -37,7 +37,7 @@ The aim of this project is to show how to create a tableview that has multiple r
     ]
 }
 ```
-<img src="./ReadmeResources/ss2.gif" width="300" height="600">
+<img src="./ReadmeResources/ss2.gif" width="25%">
 
 ### Example 3
 ```
@@ -50,13 +50,11 @@ The aim of this project is to show how to create a tableview that has multiple r
     ]
 }
 ```
-<img src="./ReadmeResources/ss3.gif" width="300" height="600">
+<img src="./ReadmeResources/ss3.gif" width="25%">
 
 
 ## Error Handling
 ### Each row is independent. Thus, if any error occurs, only the relevant row is affected.
-<img src="./ReadmeResources/error.gif" width="300" height="600">
+<img src="./ReadmeResources/error.gif" width="25%">
 
 ---
-
-### Download and enjoy :)
